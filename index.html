@@ -65,11 +65,15 @@
 </head>
 <body>
   <h1>💖 100 Hidden Messages 💖</h1>
+  <audio id="bg-music" loop>
+  <source src="romantic.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<button class="btn" onclick="document.getElementById('bg-music').play()">Play Background Music</button>
+
   <div id="messages"></div>
   <div class="floating" id="floating"></div>
-  <audio autoplay loop>
-    <source src="romantic.mp3" type="audio/mp3">
-  </audio>
   <script>
       const messages = [
   "Message 1: Your smile brightens my world.",
@@ -173,6 +177,7 @@
   "Message 99: You are the story my soul always wanted to tell.",
   "Message 100: You are, and always will be, my everything."
 ];
+
 
     const msgContainer = document.getElementById('messages');
     messages.forEach((msg, index) => {
